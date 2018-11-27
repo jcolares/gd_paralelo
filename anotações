@@ -1,0 +1,49 @@
+X = conjunto de dados de exemplo
+y = conjunto de respostas corretas
+ŷ = conjunto de respostas fornecidas pela hipótese
+W = conjunto de parâmetros
+J = custo (erro) obtido 
+theta = conjunto de parâmetros da função 
+alpha = taxa de aprendizado
+calcular_custo
+calcular_gradiente  
+lote = m
+m = quantidade de exemplos em X
+epochs = numero de iterações do gradiente
+
+calcular_custo(ŷ, y)
+    m = contar(y)
+    para i de 1 até m faça
+        custo = (y[i] - ŷ[i])^2
+        j = j + custo
+    fim_para 
+    J = j/i
+    retorne J    
+
+calcular_gradiente(X, W, )
+    m = contar(X)
+    para i de 1 a m faça
+        X[i] * W
+
+update = learning_rate * gradient_of_parameters
+parameters = parameters - update
+
+
+**** VANILLA GD ****
+while True:
+	Wgradient = evaluate_gradient(loss, data, W)
+	W += -alpha * Wgradient
+
+**** STOCHASTIC GD ****
+while True:
+	batch = next_training_batch(data, 256)
+	Wgradient = evaluate_gradient(loss, batch, W)
+	W += -alpha * Wgradient
+
+https://www.pyimagesearch.com/2016/10/17/stochastic-gradient-descent-sgd-with-python/
+
+
+Intuição GD:
+https://matheusfacure.github.io/2017/02/20/MQO-Gradiente-Descendente/
+
+
